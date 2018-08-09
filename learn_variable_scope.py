@@ -17,6 +17,7 @@ Date:	2018/08/09
 import tensorflow as tf
 
 import os
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 # =====================================================================
@@ -24,24 +25,24 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 # =====================================================================
 
 with tf.variable_scope("v1"):
-	a1 = tf.get_variable(name="a1", shape=[1], initializer=tf.constant_initializer(1))
-	a2 = tf.Variable(tf.random_normal([2, 3], stddev=0.1), name="a2")
+    a1 = tf.get_variable(name="a1", shape=[1], initializer=tf.constant_initializer(1))
+    a2 = tf.Variable(tf.random_normal([2, 3], stddev=0.1), name="a2")
 
 with tf.variable_scope("v2"):
-	a3 = tf.get_variable(name="a1", shape=[1], initializer=tf.constant_initializer(1))
-	a4 = tf.Variable(tf.random_normal([2, 3], stddev=0.1), name="a2")
+    a3 = tf.get_variable(name="a1", shape=[1], initializer=tf.constant_initializer(1))
+    a4 = tf.Variable(tf.random_normal([2, 3], stddev=0.1), name="a2")
 
 # =====================================================================
 # 2. Use a session to execute operations in the graph                 #
 # =====================================================================
 
 with tf.Session() as sess:
-	sess.run(tf.global_variables_initializer())
+    sess.run(tf.global_variables_initializer())
 
-	print(a1.name)
-	print(a2.name)
-	print(a3.name)
-	print(a4.name)
+    print(a1.name)
+    print(a2.name)
+    print(a3.name)
+    print(a4.name)
 
 '''
 # output:
