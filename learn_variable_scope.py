@@ -1,7 +1,7 @@
 # _*_ coding: utf-8 _*_
 
 """
-Learn `variable_scope(...)` and `name_scope(...)` of TensorFlow.
+Learn `tf.variable_scope(...)` and `tf.name_scope(...)` of TensorFlow.
 
 结论：
 `tf.variable_scope(...)`可以让变量有相同的名字，包括由`tf.variable_scope(...)`
@@ -14,10 +14,10 @@ Author: StrongXGP
 Date:	2018/08/09
 """
 
+import tensorflow as tf
+
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-
-import tensorflow as tf
 
 # =====================================================================
 # 1. Assemble our graph												  #
