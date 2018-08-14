@@ -4,7 +4,7 @@
 Learn `tf.variable_scope(...)` and `tf.name_scope(...)` of TensorFlow.
 
 结论：
-`tf.variable_scope(...)`可以让变量有相同的名字，包括由`tf.variable_scope(...)`
+`tf.variable_scope(...)`可以让变量有相同的名字，包括由`tf.get_variable(...)`
 和`tf.Variable(...)`创建的变量。
 
 reference:
